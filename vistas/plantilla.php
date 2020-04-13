@@ -44,6 +44,8 @@
 
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/sweetalert.css">
 
+	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/plugins/dscountdown.css">
+
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Condensed" rel="stylesheet">
@@ -66,6 +68,8 @@
 
 	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/carrito-de-compras.css">
 
+	<link rel="stylesheet" href="<?php echo $url; ?>vistas/css/ofertas.css">
+
 	<!--=====================================
 	PLUGINS DE JAVASCRIPT
 	======================================-->
@@ -83,6 +87,8 @@
 	<script src="<?php echo $url; ?>vistas/js/plugins/sweetalert.min.js"></script>
 
 	<script src="<?php echo $url; ?>vistas/js/plugins/md5-min.js"></script>
+
+	<script src="<?php echo $url; ?>vistas/js/plugins/dscountdown.min.js"></script>
 
 </head>
 

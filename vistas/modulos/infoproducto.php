@@ -601,21 +601,44 @@ INFOPRODUCTOS
 
 				<?php
 
-					if($infoproducto["precio"]==0){
+if($infoproducto["precio"]==0){
 
-						echo '<div class="col-md-6 col-xs-12">';
+	echo '<div class="col-md-6 col-xs-12">';
 
-							if($infoproducto["tipo"]=="virtual"){
-						
-								echo '<button class="btn btn-default btn-block btn-lg backColor">ACCEDER AHORA</button>';
+	if(isset($_SESSION["validarSesion"]) && $_SESSION["validarSesion"] == "ok"){
 
-							}else{
+		if($infoproducto["tipo"]=="virtual"){
+	
+			echo '<button class="btn btn-default btn-block btn-lg backColor agregarGratis" idProducto="'.$infoproducto["id"].'" idUsuario="'.$_SESSION["id"].'" tipo="'.$infoproducto["tipo"].'" titulo="'.$infoproducto["titulo"].'">ACCEDER AHORA</button>';
 
-								echo '<button class="btn btn-default btn-block btn-lg backColor">SOLICITAR AHORA</button>';
+		}else{
 
-							}
+			echo '<button class="btn btn-default btn-block btn-lg backColor agregarGratis" idProducto="'.$infoproducto["id"].'" idUsuario="'.$_SESSION["id"].'" tipo="'.$infoproducto["tipo"].'" titulo="'.$infoproducto["titulo"].'">SOLICITAR AHORA</button>
 
-							echo '</div>';
+				<br>
+
+				<div class="col-xs-12 panel panel-info text-left">
+
+				<strong>¡Atención!</strong>
+
+					El producto a solicitar es totalmente gratuito y se enviará a la dirección solicitada, sólo se cobrará los cargos de envío.
+
+				</div>
+			';
+
+		}
+
+	}else{
+
+		echo '<a href="#modalIngreso" data-toggle="modal">
+
+			<button class="btn btn-default btn-block btn-lg backColor">	SOLICITAR AHORA</button>
+
+		</a>';
+
+	}
+
+	echo '</div>';
 
 					}else{
 
